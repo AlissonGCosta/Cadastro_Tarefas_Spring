@@ -51,5 +51,11 @@ public class TarefaController {
         return tarefaService.updateTarefa(tarefaEntityDto, id);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteTarefa(@PathVariable UUID id)  {
+        tarefaService.deleteTarefa(id);
+    }
+
 }
 

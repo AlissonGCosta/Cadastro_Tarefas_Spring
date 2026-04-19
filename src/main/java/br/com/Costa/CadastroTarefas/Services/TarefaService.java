@@ -84,4 +84,8 @@ public class TarefaService {
         return novaTarefa;
 
     }
+
+    public void  deleteTarefa(UUID Id){
+            Tarefas.removeIf(i -> i.getId().equals(Id));
+    }
 }
